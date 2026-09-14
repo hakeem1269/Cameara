@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منظومة الرصد الحي - العراق</title>
+    <!-- Tailwind CSS لتصميم سريع واحترافي -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- خط العربي Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 h-screen flex flex-col overflow-hidden">
+
+    <!-- شريط القيادة العلوي -->
+    <header class="bg-slate-900/90 border-b border-slate-800 px-6 py-3 flex justify-between items-center shadow-lg z-10">
+        <div class="flex items-center space-x-3 space-x-reverse">
+            <div class="w-3 h-3 bg-emerald-500 rounded-full animate-ping"></div>
+            <h1 class="text-base font-bold tracking-wider text-emerald-400">IRAQ-SURVEILLANCE // CORE</h1>
+        </div>
+        <div class="flex items-center space-x-6 space-x-reverse text-xs text-slate-400">
+            <div>المنطقة: <span class="text-slate-200 font-semibold">العراق (IQ)</span></div>
+            <div class="bg-emerald-950/50 border border-emerald-800 text-emerald-300 px-2 py-1 rounded">النظام نشط</div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="flex flex-1 overflow-hidden">
+        
+        <!-- القائمة الجانبية للفلترة -->
+        <aside class="w-72 bg-slate-900/50 border-l border-slate-800 p-4 flex flex-col space-y-4">
+            <h2 class="text-xs font-bold text-slate-400 uppercase tracking-widest">تصفية القطاعات الجغرافية</h2>
+            
+            <div class="space-y-1">
+                <button onclick="filterRegion('الكل')" class="city-btn w-full text-right bg-emerald-600/20 text-emerald-400 border border-emerald-500/40 p-2.5 rounded-lg text-sm font-medium transition hover:bg-emerald-600/30">🌐 كافة القطاعات</button>
+                <button onclick="filterRegion('بغداد')" class="city-btn w-full text-right bg-slate-900 text-slate-300 border border-slate-800 p-2.5 rounded-lg text-sm font-medium transition hover:bg-slate-800">🏙️ بغداد - العاصمة</button>
+                <button onclick="filterRegion('البصرة')" class="city-btn w-full text-right bg-slate-900 text-slate-300 border border-slate-800 p-2.5 rounded-lg text-sm font-medium transition hover:bg-slate-800">⚓ البصرة - الجنوب</button>
+                <button onclick="filterRegion('أربيل')" class="city-btn w-full text-right bg-slate-900 text-slate-300 border border-slate-800 p-2.5 rounded-lg text-sm font-medium transition hover:bg-slate-800">⛰️ أربيل - الشمال</button>
+            </div>
+
+            <hr class="border-slate-800">
+
+            <div class="flex-1 flex flex-col justify-end">
+                <div class="bg-slate-900 border border-slate-800 p-3 rounded-lg text-xs space-y-2 text-slate-400">
+                    <div class="font-bold text-slate-300">حالة النظام:</div>
+                    <div class="flex justify-between"><span>العقد المتصلة:</span> <span class="text-emerald-400 font-bold">4 عُقد</span></div>
+                    <div class="flex justify-between"><span>استقرار الإشارة:</span> <span class="text-emerald-400 font-bold">99.8%</span></div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- شبكة عرض الشاشات -->
+        <main class="flex-1 p-6 overflow-y-auto">
+            <div id="feeds-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- سيتم حقن الكاميرات هنا برمجياً -->
+            </div>
+        </main>
+
+    </div>
+
+    <!-- استدعاء ملف الجافاسكريبت الخارجي -->
+    <script src="script.js"></script>
+</body>
+</html>
