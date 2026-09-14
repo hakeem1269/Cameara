@@ -1,0 +1,29 @@
+/* تنسيقات عامة للمشروع */
+body {
+    font-family: 'Cairo', sans-serif;
+}
+
+/* خلفية بنمط شبكة تكتيكية (Grid Background) */
+.grid-bg {
+    background-image: linear-gradient(to right, rgba(30, 41, 59, 0.2) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(30, 41, 59, 0.2) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* تخصيص شريط التمرير (Scrollbar) ليكون أنيقاً ومتوافقاً مع الوضع الداكن */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+}
